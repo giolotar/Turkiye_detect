@@ -14,3 +14,5 @@ The code thus trains the model, runs model evaluation.
 (B) Turkiye Detect Inference Runner .ipynb
 
 This code is used to run inference on different available images of the scene; the model configuration and weights are loaded and a predictor is assembled. Then, the model is fed a .tif image, the model tiles it, runs inference and exports the .shp alongside an image of the inference. 
+
+![System diagram](Screenshot 2025-10-09 at 18.41.17.png)
