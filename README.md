@@ -2,6 +2,8 @@
 # Turkiye Detect — Rubble Detection Training & Inference
 This repository provides a pair of preset notebooks that demonstrate how to **train** and **run inference** for rapid rubble detection from satellite imagery in the aftermath of an earthquake. It is part of a broader effort to design effective deep learning models for geospatial applications.
 
+![Rubble detection result](tr1.png)
+
 ## Contents
 
 ### (A) `Turkey Detect Model training.ipynb`
