@@ -1,18 +1,22 @@
-# Turkiye Detect
 
-This repository contains few preset codes that showcase the training of a deep learning model for rapid rubble detection from satellite imagery in the aftermath of an earthquake. 
-This is part of a project to design effective deep learning models for geospatial applications. 
+# Turkiye Detect — Rubble Detection Training & Inference
+This repository provides a pair of preset notebooks that demonstrate how to **train** and **run inference** for rapid rubble detection from satellite imagery in the aftermath of an earthquake. It is part of a broader effort to design effective deep learning models for geospatial applications.
 
-The Repository contains the following files:
+## Contents
 
-(A) Turkey Detect Model training.ipynb
+### (A) `Turkey Detect Model training.ipynb`
+Trains a **Mask R-CNN** model with **Detectron2** on a custom dataset of 1024×1024 image tiles.
+- Dataset: tiles from satellite imagery with **train/val/test** splits.
+- Annotations: **COCO-style** labels created with **CVAT**.
+- Notebook covers: data setup, model configuration, training, and evaluation.
 
-This code shows the training of a maskrCNN model using detectron2 library on a custom dataset. The dataset is composed of 1024x1024 tiles that make up a portion of the satellite image, these tiles are split in train, test, val. The dataset includes COCO-Style annotations made with CVAT.ai. 
+### (B) `Turkiye Detect Inference Runner.ipynb`
+Runs inference on new imagery using a trained model.
+- Loads the saved configuration and weights, builds a Detectron2 predictor.
+- Accepts a **GeoTIFF (`.tif`)** scene, automatically tiles it, and runs inference.
+- Exports a **Shapefile (`.shp`)** of the predictions and a rendered image with the inference overlays.
 
-The code thus trains the model, runs model evaluation.
 
-(B) Turkiye Detect Inference Runner .ipynb
+### (C) 'WebMaps'
+Generate simple webmaps with the resulting .shp
 
-This code is used to run inference on different available images of the scene; the model configuration and weights are loaded and a predictor is assembled. Then, the model is fed a .tif image, the model tiles it, runs inference and exports the .shp alongside an image of the inference. 
-
-![System diagram](Screenshot 2025-10-09 at 18.41.17.png)
